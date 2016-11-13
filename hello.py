@@ -1,4 +1,4 @@
-from urlparse import urlparse
+import urlparse
 
 def app(environ, start_response):
     params = urlparse.parse_qs(environ['QUERY_STRING'], keep_blank_values=True)
