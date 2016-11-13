@@ -1,10 +1,10 @@
 import urlparse
 
 def app(environ, start_response):
-    params = urlparse.parse_qs(environ['QUERY_STRING'], keep_blank_values=True)
     data = ''
-    for key, value in params.iteritems():
-        data += key + '=' + value + '\n'
+    params = environ['QUERY_STRING'].split('&')
+    for line in params:
+        data += line + '\n'
     
     start_response("200 OK", [
         ("Content-Type", "text/plain"),
