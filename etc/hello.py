@@ -1,4 +1,6 @@
-bind = "0.0.0.0:8080"
+pythonpath = 'home/box/web'
+
+bind = '0.0.0.0:8080'
 backlog = 2048
 
 workers = 1

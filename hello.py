@@ -1,6 +1,6 @@
 from urlparse import urlparse
 
-def app(environ, start_response):
+def hello(environ, start_response):
     d = parse_qs(environ['QUERY_STRING'])
     for key in d:
         for value in d[key]:
